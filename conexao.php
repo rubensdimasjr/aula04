@@ -2,7 +2,7 @@
     $host = "localhost";
     $user = "root";
     $password = "";
-    $dBase = "lojapet";
+    $dBase = "banco_db";
 
     $conexao = mysqli_connect($host, $user, $password, $dBase);
 
