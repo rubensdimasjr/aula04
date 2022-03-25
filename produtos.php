@@ -33,11 +33,14 @@
           <?php while($produto = mysqli_fetch_assoc($listaProdutos)) { ?>
             <tr>
               <th scope="row"><?=$produto['codigo']?></th>
-              <td><?=$produto['descricao']?></td>
-              <td><?=$produto['qtde']?></td>
-              <td><?=$produto['valor']?></td>
+              <td><?=$produto['descricao'];?></td>
+              <td><?=$produto['qtde'];?></td>
+              <td><?=$produto['valor'];?></td>
               <th>
-                <a href="./alteraProduto?=<?= $produto['id'] ?>">Alterar</a></th>
+                <form action="./buscaProduto.php?id=<?=$produto['codigo'];?>" method="POST">
+                  <input type="submit" value="Alterar">
+                </form>
+              </th>
             </tr>
             <?php } ?>
         </tbody>
